@@ -1,0 +1,19 @@
+.n1 {
+    background-color: #ff9999;
+    font-family: Verdana, sans-serif;
+}
+
+.n2 {
+    font-size: 36px;
+}
+
+#id1 {
+    color: rgb(0, 0, 204);
+    font-size: 36px;
+}
+
+#id2 {
+    background-color: hsl(156, 100%, 50%);
+    font-size: 24px;
+    font-weight: bold;
+}
