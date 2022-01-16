@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  width: 250px;
+}
+
+button {
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 250px;
+  margin-bottom: 0px;
+}
+
+/*---------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-links {
+    padding: 5px;
+    margin: 5px;
+
+    display: flex;
+}
+
+.right-links {
+    padding: 5px;
+    margin: 5px;
+
+    display: flex;
+}
+
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: darkgray;
+    padding: 2px;
+    margin: 2px;
+}  
+ul {
+    list-style-type: none;
+    gap: 5px;
+}
+
+/*---------------------------------------*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 5px;
+}
+
+.logo {
+    align-self: center;
+}
+
+.buttons {
+    align-self: center;
+}
+
+/*---------------------------------------*/
+
+.footer {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;    
+}
