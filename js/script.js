@@ -52,6 +52,7 @@ const losesTag = document.querySelector(".loses");
 const round = document.querySelector(".round");
 
 function showResults(r){
+    console.log(r);
     console.log("Wins: " + wins);
     console.log("Ties: " + ties);
     console.log("Loses: " + loses);
@@ -65,17 +66,11 @@ function showResults(r){
 }
 
 rockBtn.addEventListener('click', () => {
-    const r = playRound("ROCK", computerPlay());
-    console.log(r);
-    showResults(r);
+    showResults(playRound("ROCK", computerPlay()));
 });
 paperBtn.addEventListener('click', () => {
-    const r = playRound("PAPER", computerPlay());
-    console.log(r);
-    showResults(r);
+    showResults(playRound("PAPER", computerPlay()));
 });
 scissorsBtn.addEventListener('click', () => {
-    const r = playRound("SCISSORS", computerPlay());
-    console.log(r);
-    showResults(r);
+    showResults(playRound("SCISSORS", computerPlay()));
 });
