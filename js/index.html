@@ -4,65 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <title>Rock, paper, scissors.</title>
 </head>
 <body>
-    <script>
-        let wins = 0;
-        let ties = 0;
-        let loses = 0;
+    <div>
+        <h1>Rock - Paper - Scissors</h1>
+    </div>
 
-        function computerPlay(){
-            let num = Math.floor((Math.random()*3)+1);
-            switch(num){
-                case 1: return "ROCK";
-                case 2: return "PAPER";
-                case 3: return "SCISSORS";
-            }
-        }
+    <div class="results">
+        <div>
+            <h3>Wins:</h3>
+            <p class="wins">0</p>
+        </div>
+        <div>
+            <h3>Ties:</h3>
+            <p class="ties">0</p>
+        </div>
+        <div>
+            <h3>Loses:</h3>
+            <p class="loses">0</p>
+        </div>
+    </div>
 
-        function playRound(playerSelection, computerSelection) {
-            switch(playerSelection){
-                case "ROCK"    : return rockAgainst(computerSelection);
-                case "PAPER"   : return paperAgainst(computerSelection);
-                case "SCISSORS": return scissorsAgainst(computerSelection);
-            }
-        }
+    <div class="btns">
+        <button class="rock-btn">Rock</button>
+        <button class="paper-btn">Paper</button>
+        <button class="scissors-btn">Scissors</button>
+    </div>
 
-        function rockAgainst(computerSelection){
-            switch(computerSelection){
-                case "ROCK"     : ties++; return "Tie: Rock vs Rock";
-                case "PAPER"    : loses++; return "Lose: Rock vs Paper";
-                case "SCISSORS" : wins++; return "Win: Rock vs Scissors";
-            }
-        }
-        function paperAgainst(computerSelection){
-            switch(computerSelection){
-                case "ROCK"     : wins++; return "Win: Paper vs Rock";
-                case "PAPER"    : ties++; return "Tie: Paper vs Paper";
-                case "SCISSORS" : loses++; return "Lose: Paper vs Scissors";
-            }
-        }
-        function scissorsAgainst(computerSelection){
-            switch(computerSelection){
-                case "ROCK"     : loses++; return "Lose: Scissors vs Rock";
-                case "PAPER"    : wins++; return "win: Scissors vs Paper";
-                case "SCISSORS" : ties++; return "Tie: Scissors vs Scissors";
-            }
-        }
-
-        function game(){
-            let playerSelection;
-            for (let i = 0; i < 5; i++) {
-                playerSelection = prompt("Your play (Rock, Paper, Scissors)");
-                console.log(playRound(playerSelection.toUpperCase(), computerPlay()));
-            }
-            console.log("Wins: " + wins);
-            console.log("Ties: " + ties);
-            console.log("Loses: " + loses);
-        }
-
-        game();
-    </script>
+    <div class="round"></div>
 </body>
 </html>
