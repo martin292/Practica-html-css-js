@@ -1,23 +1,19 @@
 const grid = document.querySelector(".grid");
 
-function createColumns(){
-    for(let i = 0; i < 16; i++){
-        grid.appendChild(createDiv());
-    }
-}
-
 function createGrid(){
     for(let i = 0; i < 16; i++){
-        createColumns();
+        for(let i = 0; i < 16; i++){
+            grid.appendChild(createDiv());
+        }
     }
 }
 
 function createDiv(){
     const div = document.createElement('div');
 
-    div.style.height = '20px';
-    div.style.width = '20px';
-    div.style.border = '1px solid black';
+    div.style.height = '25px';
+    div.style.width = '25px';
+    div.style.border = '1px solid grey';
 
     div.addEventListener("mouseover", () => {
         div.style.backgroundColor = 'black';
@@ -25,9 +21,5 @@ function createDiv(){
 
     return div;
 }
-
-grid.addEventListener("mouseover", () => {
-
-});
 
 createGrid();
