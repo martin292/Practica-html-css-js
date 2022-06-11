@@ -1,0 +1,27 @@
+body{
+    background: linear-gradient(90deg, blue, red);
+}
+
+
+/*
+calc()
+
+
+width: min(150px, 100%);
+height: min(150px, 100%);
+
+
+
+----------------------------------------
+width: max(100px, 4em, 50%);
+
+select the largest one
+
+----------------------------------------
+font-size: clamp(320px, 80vw, 60rem)
+
+the smallest value (320px)
+the ideal value (80vw)
+the largest value (60rem)
+
+*/

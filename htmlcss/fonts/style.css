@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+body {
+    font-size: 1em;
+    font-family: 'Kdam Thmor Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+div {
+    width: 50%;
+}
+
+.p0 {
+    letter-spacing: .1em;
+    line-height: 2;
+    text-transform: uppercase;
+    text-shadow: grey 1px 0 10px;
+}
+
+.p1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

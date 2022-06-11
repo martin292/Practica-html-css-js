@@ -1,0 +1,41 @@
+/*Static and Relative Positioning*/
+/*
+p {
+    position: relative;
+    left: 50%;
+}
+*/
+
+/*Absolute Positioning*/
+
+.card-container {
+    position: relative;
+    width: 90%
+}
+.card-image {
+    position: absolute;
+    width: 95%;
+    z-index: -1;
+}
+.card-body {
+    position: absolute;
+    width: 50%;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 8rem;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: roboto;
+}
+.card-heading {
+    position: absolute;
+}
+
+/*Fixed Positioning*/
+
+.p0 {
+    position: fixed;
+}
+
+/*Sticky Positioning*/

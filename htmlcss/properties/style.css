@@ -1,0 +1,36 @@
+/*
+Propertie (variables)
+
+--color-text: white;
+
+------------------------------------------------------------------------
+Fallback Values. var()
+
+background-color: var(--undeclared-property, black);
+color: var(--undeclared-again, var(--color-text, yellow));
+
+------------------------------------------------------------------------
+
+*/
+
+/*Scope*/
+
+.cool-div {
+    --main-bg: red;
+}
+  
+.cool-paragraph {
+    background-color: var(--main-bg);
+}
+  
+.boring-paragraph {
+    background-color: var(--main-bg);
+}
+
+/*
+:root {
+  --main-color: red;
+}
+variable accesible en todo el css
+*/
+

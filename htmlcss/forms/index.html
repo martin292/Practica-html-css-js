@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <form action="example.com/path" method="post">
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" placeholder="Name" name="name">
+
+        <br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" placeholder="you@email.com" name="email">
+
+        <br>
+
+        <label for="pass">Pasword: </label>
+        <input type="password" id="pass" name="pass">
+
+        <br>
+
+        <label for="num">Amount: </label>
+        <input type="number" name="number" id="num">
+
+        <br>
+
+        <label for="dob">Date of Birth: </label>
+        <input type="date" id="dob" name="dob">
+
+        <br>
+
+        <textarea name="" id="" cols="" rows="">Holaaaaaaaaaaaaaa</textarea>
+
+        <br>
+
+        <select name="options" id="">
+            <option value="val-1">AAA</option>
+            <option value="val-2" selected>BBB</option>
+            <option value="val-3">CCC</option>
+        </select>
+
+        <br>
+
+        <select name="fashion">
+            <optgroup label="Clothing">
+              <option value="t_shirt">T-Shirts</option>
+              <option value="sweater">Sweaters</option>
+              <option value="coats">Coats</option>
+            </optgroup>
+            <optgroup label="Foot Wear">
+              <option value="sneakers">Sneakers</option>
+              <option value="boots">Boots</option>
+              <option value="sandals">Sandals</option>
+            </optgroup>
+        </select>
+
+        <br>
+
+          <h1>Ticket Type</h1>
+          <div>
+            <input type="radio" id="child" name="ticket_type" value="child">
+            <label for="child">Child</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+            <label for="adult">Adult</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="senior" name="ticket_type" value="senior">
+            <label for="senior">Senior</label>
+          </div>
+
+          <br>
+
+          <h1>Pizza Toppings</h1>
+
+          <div>
+            <input type="checkbox" id="sausage" name="topping" value="sausage">
+            <label for="sausage">Sausage</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="onions" name="topping" value="onions">
+            <label for="onions">Onions</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" checked>
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+          </div>
+        
+        <br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Click to Toggle</button>
+
+        <br>
+
+        <fieldset>
+            <legend>ABC</legend>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+          
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name">
+        </fieldset>
+
+        <br>
+
+    </form>
+    
+        <form action="#" method="get">
+            <div>
+              <label for="user_email">*Email:</label>
+              <input type="email" id="user_email" name="user_email" required>
+            </div>
+            <br>
+          
+            <div>
+              <label for="user_password">*Password:</label>
+              <input type="password" id="user_password" name="user_password" required>
+            </div>
+          
+            <button type="submit">Login</button>
+        </form>
+
+        <br>
+
+        <form action="#" method="get">
+            <div>
+              <textarea placeholder="What's happening?" minlength="3" maxlength="33"></textarea>
+            </div>            
+            <button type="submit">Tweet</button>
+        </form>
+
+        <br>
+
+        <form action="#" method="get">
+            <div>
+              <label for="passengers">Passengers</label>
+            </div>
+            <input type="number" id="passengers" name="passengers" max="5" value="0">             
+            <div>
+              <button type="submit">Book</button>
+            </div>
+        </form>
+
+</body>
+</html>
