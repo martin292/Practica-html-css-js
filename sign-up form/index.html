@@ -8,6 +8,70 @@
     <title>Sign-up form</title>
 </head>
 <body>
+    <div class="left">
+        <div class="title">
+            <img src="./odin-lined.png">
+            Odin
+        </div>
+        <div class="credits">
+            <p>Photo by Halie West on Unsplash</p>
+        </div>
+    </div>
     
+    <div class="right">
+        <p>
+            This is not a real online service! 
+            You know you need something like this in your life to help you realize your deepest dreams. 
+            Sign up now to get started.
+        </p>
+        <p>You know you want to.</p>
+
+        <form action="#" method="post">
+            <div class="formContent">
+                <h3>Let's do this!</h3>
+                <div class="inputs">
+
+                    <div class="leftInputs">
+                        <div>
+                            <label for="name">First name: </label><br>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        
+                        <div>
+                            <label for="email">Email: </label><br>
+                            <input type="email" id="email" placeholder="your@email.com" name="email">
+                        </div>
+                        
+                        <div>
+                            <label for="pass">Pasword: </label><br>
+                            <input type="password" id="pass" name="pass" required>
+                        </div>                        
+                    </div>
+                    <div class="rightInputs">
+                        <div>
+                            <label for="lastName">Last name: </label><br>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        
+                        <div>
+                            <label for="phone">Phone number: </label><br>
+                            <input type="text" name="phone" id="phone">
+                        </div>
+                        
+                        <div>
+                            <label for="conPass">Confirm pasword: </label><br>
+                            <input type="password" id="conPass" name="conPass" required>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>            
+
+            <button class="btnCreate" type="submit">Create Account</button>                
+        </form>
+
+        <p>Already have an account? <a href="http://">Log in</a> </p>
+    </div>
 </body>
 </html>

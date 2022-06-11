@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/*----------------------------------------------------------*/
+
+.left{
+    background-image: url('./plant.avif');
+    background-size: cover;
+    background-position: center center;
+    
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+
+    color: white;
+}
+
+.title{
+    margin-top: 20vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 2.5em;
+    height: 3em;
+}
+
+/*-----------------------------------------------------------*/
+
+.right{
+    background-color: #f2f2f2;
+
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right > p{
+    max-width: 80%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.right p:last-child{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+form{
+    margin-top: 10px;
+}
+
+.formContent{
+    background-color: white;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.formContent > h3{
+    margin-top: 0px;
+    font-weight: 400;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+}
+
+.leftInputs{
+    margin-right: 25px;
+}
+.leftInputs > div{
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+.rightInputs{
+    margin-left: 25px;
+}
+.rightInputs > div{
+    margin-bottom: 10px;
+}
+
+input {
+    /*box-sizing: border-box;*/
+    border: 1px solid #e5e7eb;
+    width: 100%;
+    font-size: 1rem;
+    
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+button{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    background-color: #596D48;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
