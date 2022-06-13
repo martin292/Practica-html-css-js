@@ -4,44 +4,62 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-
-    this.info = function () {
-        let ret = title + ' by ' + author + ', ' + pages + ' pages, ';
-        return (read) ? ret + 'you have read the book.' : ret + 'you havent read the book';
-    };
 }
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
 }
+
+function deleteBook(i) {
+    delete myLibrary[i];
+}
+
 //------------------------------------------------------
 
-function populateRow(book) {
+function deleteRow(i, t) {
+    let row = document.querySelectorAll('tr');
+    row.forEach(r => {
+        if (r.id == i) {
+            t.removeChild(r);
+        }
+    })
+}
+
+function populateRow(book, i) {
     let row = document.createElement('tr');
 
     let cel1 = document.createElement('th');
     let cel2 = document.createElement('th');
     let cel3 = document.createElement('th');
     let cel4 = document.createElement('th');
+    let cel5 = document.createElement('th');
+    let delBtn = document.createElement('button');
+
+    delBtn.textContent = 'Del';
+    delBtn.className = 'delete';
+    delBtn.id = i;
 
     cel1.textContent = book.title;
     cel2.textContent = book.author;
     cel3.textContent = book.pages;
     cel4.textContent = book.read;
+    cel5.appendChild(delBtn);
 
     row.appendChild(cel1);
     row.appendChild(cel2);
     row.appendChild(cel3);
     row.appendChild(cel4);
+    row.appendChild(cel5);
+
+    row.id = i;
 
     return row;
 }
 
 function populateTable(t) {
-    myLibrary.forEach(book => {
-        t.appendChild(populateRow(book));
+    myLibrary.forEach((book, i) => {
+        t.appendChild(populateRow(book, i));
     });
-    amount.textContent = myLibrary.length;
 }
 
 function createNewBook() {
@@ -53,15 +71,27 @@ function createNewBook() {
     return new Book(t, a, p, r);
 }
 
-function inputsComplete(){
+function inputsComplete() {
     return title.value != '' && author.value != '' && pages.value != '';
 }
 
-function restartInputs(){
+function restartInputs() {
     title.value = '';
     author.value = '';
     pages.value = '';
     read.checked = false;
+}
+
+function delListeners(btn){
+    btn.addEventListener('click', () => {
+        //deleteBook(+btn.id);
+        deleteRow(btn.id, tbl);
+    });
+}
+
+function updateDeleteBtns(){
+    let del = document.querySelectorAll('.delete');
+    del.forEach(btn => delListeners(btn));
 }
 
 //-------------------------------
@@ -90,15 +120,24 @@ const author = document.querySelector('#author');
 const pages = document.querySelector('#pages');
 const read = document.querySelector('#read');
 
-window.addEventListener('load', populateTable(tbl));
+window.addEventListener('load', () => {
+    populateTable(tbl) 
+    updateDeleteBtns();
+});
+
 
 btn.addEventListener('click', (event) => {
-    if(inputsComplete()){
+    if (inputsComplete()) {
         let newBook = createNewBook();
         addBookToLibrary(newBook);
-        tbl.appendChild(populateRow(newBook));
-        amount.textContent = myLibrary.length;
+        tbl.appendChild(populateRow(newBook, myLibrary.length - 1));
         restartInputs();
         event.preventDefault();
+        updateDeleteBtns();
     }
 });
+
+
+
+
+
