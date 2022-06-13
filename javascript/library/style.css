@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.topRow > th, .bottomRow > td{
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+td {
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+caption {
+    padding: 10px;
+}
+
+/*---------------*/
+
+.new{
+    display: flex;
+    justify-content: center;
+}
+
+.new > form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
