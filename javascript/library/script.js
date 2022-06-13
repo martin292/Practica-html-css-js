@@ -35,7 +35,7 @@ function populateRow(book, i) {
     let cel5 = document.createElement('th');
     let delBtn = document.createElement('button');
 
-    delBtn.textContent = 'Del';
+    delBtn.innerHTML = '<img src="./icons8-basura.svg"/>';
     delBtn.className = 'delete';
     delBtn.id = i;
 
