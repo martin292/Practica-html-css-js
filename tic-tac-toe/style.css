@@ -1,0 +1,47 @@
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body h3:first-child{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.board{
+    background-color: beige;
+    width: 50vh;
+    height: 50vh;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.board > div{
+    border: 1px solid black;
+    font-size: 64px;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cel-0, #cel-3, #cel-6{
+    border-left: none;
+}
+#cel-0, #cel-1, #cel-2{
+    border-top: none;
+}
+#cel-2, #cel-5, #cel-8{
+    border-right: none;
+}
+#cel-6, #cel-7, #cel-8{
+    border-bottom: none;
+}
+
+button{
+    margin-top: 20px;
+}
