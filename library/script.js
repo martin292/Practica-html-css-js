@@ -1,9 +1,11 @@
 //Constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 function addBookToLibrary(book) {
@@ -82,14 +84,14 @@ function restartInputs() {
     read.checked = false;
 }
 
-function delListeners(btn){
+function delListeners(btn) {
     btn.addEventListener('click', () => {
         //deleteBook(+btn.id);
         deleteRow(btn.id, tbl);
     });
 }
 
-function updateDeleteBtns(){
+function updateDeleteBtns() {
     let del = document.querySelectorAll('.delete');
     del.forEach(btn => delListeners(btn));
 }
@@ -121,7 +123,7 @@ const pages = document.querySelector('#pages');
 const read = document.querySelector('#read');
 
 window.addEventListener('load', () => {
-    populateTable(tbl) 
+    populateTable(tbl)
     updateDeleteBtns();
 });
 
