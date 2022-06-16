@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./style/style.css">
+  <title>ToDo List</title>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <div class="left">
+      <h3>Lists:</h3>
+      <div class="lists">
+        <div>
+          <form action="">
+            <button class="add-btn">Add</button>
+            <input type="text" id="list-name" placeholder="List name" required>
+          </form>
+        </div>
+        <div>
+          <ul class="ls"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+
+      <h3 class="list-title">Todos:</h3>
+
+      <div class="todos">
+        <button class="add-todo" disabled>+</button>
+        <div class="todo-form">
+          <form action="">
+            <input type="text" name="name" id="todo-name" placeholder="Name" required>
+            <textarea name="desc" id="todo-desc" cols="30" rows="3" placeholder="Description"></textarea>
+            <input type="date" name="date" id="todo-date" required>
+            <button class="add">Ok</button>
+          </form>
+        </div>
+
+        <div class="todo-list">
+          <div>
+            <h4>Lorem ipsum</h4>
+            <input type="checkbox" name="" id="">
+            <input type="date" name="" id="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut placerat congue leo at venenatis.
+                Donec eleifend pretium aliquam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut placerat congue leo at venenatis.
+                Donec eleifend pretium aliquam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
