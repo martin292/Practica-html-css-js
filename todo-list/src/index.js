@@ -44,16 +44,41 @@ function updateAnchors(id){
     });
 }
 
+function removeTodoList(id){
+    lists = lists.filter(tl => tl.getTitle() != id);
+}
+
+function updateTodoList(id){
+    if(title.id == id){
+        title.id = '';
+        todoList.textContent = '';
+    }
+}
+
+function addDeleteListEventToButton(btn, li){
+    btn.addEventListener('click', (e)=>{
+        updateTodoList(btn.id);
+        removeTodoList(btn.id);
+        ls.removeChild(li);
+    });
+}
+
 function updateListDOM(listName){
     let li = document.createElement('li');
     let a = document.createElement('a');
-
+    let del = document.createElement('button');
+    
     li.id = listName;
     a.href = '';
     a.id = listName;
     a.textContent = listName;
+    del.id = listName;
+    del.textContent = '-';
+
+    addDeleteListEventToButton(del, li);
 
     li.appendChild(a);
+    li.appendChild(del);
     ls.appendChild(li);
 
     updateAnchors(listName);
@@ -69,6 +94,7 @@ function createTodo(todo){
     const check = document.createElement('input');
     const date = document.createElement('input');
     const p = document.createElement('p');
+    const del = document.createElement('button');
 
     div.id = todo.getTitle();
 
@@ -86,12 +112,33 @@ function createTodo(todo){
 
     p.textContent = todo.getDescription();
 
+    del.id = todo.getTitle();
+    del.textContent = 'Delet';
+    del.addEventListener('click', ()=>{
+        getTodoList(title.id).remove(todo);
+        todoList.removeChild(div); 
+    });
+
     div.appendChild(h);
     div.appendChild(check);
     div.appendChild(date);
     div.appendChild(p);
+    div.appendChild(del);
 
     return div;
+}
+
+function todoInputComplete(){
+    return inputName.value != '' && inputDate.value != '';
+}
+function enableAddTodoButton(){
+    addTodoBtn.disabled = false;    
+}
+function restartForm(){
+    t.style.display = 'none';
+    inputName.value = '';
+    inputDate.value = '';
+    inputDesc.value = ''; 
 }
 
 add.addEventListener('click', (e)=>{
@@ -110,17 +157,16 @@ addTodoBtn.addEventListener('click', ()=>{
 });
 
 addNewTodoBtn.addEventListener('click', (e)=>{
-    if(inputName.value != '' && inputDate.value != ''){
-        addTodoBtn.disabled = false;
+    if(todoInputComplete()){
+        enableAddTodoButton();
+
         let todo = new Todo(inputName.value, inputDate.value);
         todo.setDescription(inputDesc.value);
-        let todol = getTodoList(title.id);
-        todol.addTodo(todo);
+
+        getTodoList(title.id).addTodo(todo);
         todoList.appendChild(createTodo(todo));
-        t.style.display = 'none';
-        inputName.value = '';
-        inputDate.value = '';
-        inputDesc.value = '';
+
+        restartForm()
     }
     e.preventDefault();
 });
