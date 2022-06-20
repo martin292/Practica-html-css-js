@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+
+    background-color: rgb(53, 53, 53);
+
+    font-size: 24px;
+}
+
+/*----------------------------------------------------------------------------*/
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.nav-bar{
+    border-bottom: 1px solid black;
+    background-color: rgb(38, 38, 38);
+}
+
+.drop-btn{
+    background-color: rgb(140, 140, 140);
+    margin: 10px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    font-size: 32px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+.drop-menu{
+    background-color: rgb(38, 38, 38);
+}
+
+.drop-menu > a{
+    color: gainsboro;
+    padding: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+}
