@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="#">
+    <br>
+    <input type="text" placeholder="keyword">
+    <button>Refresh</button>
+
+    <script defer>
+        const url = 'https://api.giphy.com/v1/gifs/translate?api_key=VMHTHydERtWjscIFUuCW0J4i6X3pN2A7&s=';
+        const img = document.querySelector('img');
+        const btn = document.querySelector('button');
+        const input = document.querySelector('input');
+
+        async function fetchGif(keyword){
+            const res = await fetch(url + keyword, {mode:"cors"});
+            const gifData = await res.json(); 
+            
+            img.src = gifData.data.images.original.url;
+        }
+
+        btn.addEventListener('click', ()=>{
+            if(input.value != null) fetchGif(input.value);
+        });
+
+        fetchGif('cats');        
+    </script>
+    
+</body>
+
+</html>
