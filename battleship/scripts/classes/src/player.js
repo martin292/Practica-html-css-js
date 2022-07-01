@@ -1,5 +1,5 @@
-import Board from "./board"
-import Ship from "./ship";
+import Board from "./board.js"
+import Ship from "./ship.js";
 
 class Player{
     constructor(){
@@ -32,6 +32,7 @@ class Computer extends Player{
         super();
         this.attacks = [];
     }
+
     populateBoard(){
         const ships = [new Ship(5), new Ship(4), new Ship(3), new Ship(3), new Ship(2)];
         try {
@@ -61,4 +62,15 @@ class Computer extends Player{
     generateRandomCoord(){
         return {x:this.getRandomInt(), y:this.getRandomInt()};
     }
+
+    randomPlay(){
+        const coord = this.generateRandomCoord();
+        if(this.attacks.includes(coord)){
+            this.randomPlay();
+        }else{
+            return coord;
+        }
+    }
 }
+
+export {Player, Computer};

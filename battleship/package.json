@@ -2,7 +2,7 @@
   "name": "battleship",
   "version": "1.0.0",
   "description": "Odin proyect Battleship",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "jest"
   },

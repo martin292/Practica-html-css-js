@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/script.js" defer></script>
+    <script type="module" src="./scripts/dom/generateBoard.js" defer></script>
+    <script type="module" src="./scripts/main.js" defer></script>
     <title>Battleship</title>
 </head>
 <body>
-    
+    <div class="header">
+        <h3>Battleship</h3>
+    </div>
+
+    <div class="container">
+        <div>
+            <h4>Your board</h4>
+            <div class="grid" id="player"></div>
+        </div>
+        <div>
+            <h4>Enemy board</h4>
+            <div class="grid" id="computer"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h5>dsdsdadsadsa</h5>
+    </div>
 </body>
 </html>

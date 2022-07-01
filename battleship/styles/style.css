@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(53, 53, 53);
+    color: rgb(244, 242, 242);
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;    
+}
+
+.container > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.grid > div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #1f1f1f;
+}
+
+#computer > div:hover{
+    background-color: white;
+    cursor: pointer;
+    transition: .5s;
+}

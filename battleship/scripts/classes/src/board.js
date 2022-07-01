@@ -1,5 +1,3 @@
-import Ship from '../src/ship'
-
 /*
 Board Size
 x: 0 to 9
